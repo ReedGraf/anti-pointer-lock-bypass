@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+    Google Sites Pointer Lock Bypass
+    Original Framework By: https://github.com/binary-person (No Public Repository)
+    Updated and Revised By https://github.com/ReedGraf 
+-->
+<html>
+  <script>
+    var url = prompt("What site do you want to hide?\n(It won't show URL & can't be traced but not a lot of sites work)", "http://www.astroalpaca.com/");
+    function openPage() {
+      var win;
+      win = window.open();
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      var iframe = win.document.createElement("iframe");
+      iframe.style.border = "none";
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.margin = "0";
+      iframe.src = url;
+      win.document.body.appendChild(iframe);
+    }
+  </script>
+  <body onload="openPage()"></body>
+</html>
