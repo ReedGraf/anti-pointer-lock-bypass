@@ -12,14 +12,14 @@
     var url_B = "https://reedgraf.github.io/isd279games/retrobowl/index.html";
     var appName_B = "Retro Bowl";
     
-    var url_C = "https://mywebsite.com";
-    var appName_C = "MyApp";
+    var url_C = "https://reedgraf.github.io/isd279games/asteroids/index.html";
+    var appName_C = "Asteroids";
 
-    var url_D = "https://mywebsite.com";
-    var appName_D = "MyApp";
+    var url_D = "https://reedgraf.github.io/isd279games/devil-glitch/src/index.html";
+    var appName_D = "Devil Glitch";
 
-    var url_E = "https://mywebsite.com";
-    var appName_E = "MyApp";
+    var url_E = "https://reedgraf.github.io/isd279games/rooftop-snipers/index.html";
+    var appName_E = "Rooftop Snipers";
   </script>
   <body>
     <div id="mainContainer">
@@ -28,6 +28,12 @@
       <button id="openBtn_A" class="grow"></button>
       <br />
       <button id="openBtn_B" class="grow"></button>
+      <br />
+      <button id="openBtn_C" class="grow"></button>
+      <br />
+      <button id="openBtn_D" class="grow"></button>
+      <br />
+      <button id="openBtn_E" class="grow"></button>
     </div>
 
     <!-- START OF SCRIPT A -->
@@ -69,6 +75,7 @@
       }
     </script>
     <!-- END OF SCRIPT A -->
+
     <!-- START OF SCRIPT B -->
     <script>
       var urlObj = new window.URL(window.location.href);
@@ -103,6 +110,126 @@
             }, 500);
 
             document.getElementById("openBtn_B").textContent = "Reopen " + appName_B;
+          }
+        };
+      }
+    </script>
+    <!-- END OF SCRIPT B -->
+
+    <!-- START OF SCRIPT C -->
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      document.getElementById("openBtn_C").textContent = appName_C;
+      if (url_C) {
+        var win_C;
+        document.getElementById("mainContainer").style.display = "block";
+        document.getElementById("openBtn_C").onclick = function() {
+          if (win_C) {
+            win_C.focus();
+          } 
+          else {
+            // Opened Window Elements START
+            win_C = window.open();
+            win_C.document.body.style.margin = "0";
+            win_C.document.body.style.height = "100vh";
+            var iframe = win_C.document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.margin = "0";
+            iframe.src = url_C;
+            win_C.document.body.appendChild(iframe);
+            // Opened Window Elements END
+
+            var interval = setInterval(function() {
+              if (win_C.closed) {
+                clearInterval(interval);
+                win_C = undefined;
+                document.getElementById("openBtn_C").textContent = "Reopen " + appName_C;
+              }
+            }, 500);
+
+            document.getElementById("openBtn_C").textContent = "Reopen " + appName_C;
+          }
+        };
+      }
+    </script>
+    <!-- END OF SCRIPT C -->
+
+    <!-- START OF SCRIPT D -->
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      document.getElementById("openBtn_D").textContent = appName_D;
+      if (url_D) {
+        var win_D;
+        document.getElementById("mainContainer").style.display = "block";
+        document.getElementById("openBtn_D").onclick = function() {
+          if (win_D) {
+            win_D.focus();
+          } 
+          else {
+            // Opened Window Elements START
+            win_D = window.open();
+            win_D.document.body.style.margin = "0";
+            win_D.document.body.style.height = "100vh";
+            var iframe = win_D.document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.margin = "0";
+            iframe.src = url_D;
+            win_D.document.body.appendChild(iframe);
+            // Opened Window Elements END
+
+            var interval = setInterval(function() {
+              if (win_D.closed) {
+                clearInterval(interval);
+                win_D = undefined;
+                document.getElementById("openBtn_D").textContent = "Reopen " + appName_D;
+              }
+            }, 500);
+
+            document.getElementById("openBtn_D").textContent = "Reopen " + appName_D;
+          }
+        };
+      }
+    </script>
+    <!-- END OF SCRIPT D -->
+
+    <!-- START OF SCRIPT E -->
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      document.getElementById("openBtn_E").textContent = appName_E;
+      if (url_E) {
+        var win_E;
+        document.getElementById("mainContainer").style.display = "block";
+        document.getElementById("openBtn_E").onclick = function() {
+          if (win_E) {
+            win_E.focus();
+          } 
+          else {
+            // Opened Window Elements START
+            win_E = window.open();
+            win_E.document.body.style.margin = "0";
+            win_E.document.body.style.height = "100vh";
+            var iframe = win_E.document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.margin = "0";
+            iframe.src = url_E;
+            win_E.document.body.appendChild(iframe);
+            // Opened Window Elements END
+
+            var interval = setInterval(function() {
+              if (win_E.closed) {
+                clearInterval(interval);
+                win_E = undefined;
+                document.getElementById("openBtn_E").textContent = "Reopen " + appName_E;
+              }
+            }, 500);
+
+            document.getElementById("openBtn_E").textContent = "Reopen " + appName_E;
           }
         };
       }
