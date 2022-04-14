@@ -6,11 +6,11 @@
 -->
 <html>
   <script>
-    var url_A = "https://mywebsite.com";
-    var appName_A = "MyApp";
+    var url_A = "https://vscode.dev";
+    var appName_A = "VSCode";
 
-    var url_B = "https://mywebsite.com";
-    var appName_B = "MyApp";
+    var url_B = "https://reedgraf.github.io/isd279games/retrobowl/index.html";
+    var appName_B = "Retro Bowl";
     
     var url_C = "https://mywebsite.com";
     var appName_C = "MyApp";
@@ -33,7 +33,7 @@
     <!-- START OF SCRIPT A -->
     <script>
       var urlObj = new window.URL(window.location.href);
-
+      document.getElementById("openBtn_A").textContent = appName_A;
       if (url_A) {
         var win_A;
         document.getElementById("mainContainer").style.display = "block";
@@ -72,7 +72,7 @@
     <!-- START OF SCRIPT B -->
     <script>
       var urlObj = new window.URL(window.location.href);
-
+      document.getElementById("openBtn_B").textContent = appName_B;
       if (url_B) {
         var win_B;
         document.getElementById("mainContainer").style.display = "block";
