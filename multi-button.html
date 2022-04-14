@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+    Google Sites Pointer Lock Bypass
+    Original Framework By: https://github.com/binary-person (No Public Repository)
+    Updated and Revised By https://github.com/ReedGraf 
+-->
+<html>
+  <script>
+    var url_A = "https://mywebsite.com";
+    var appName_A = "MyApp";
+
+    var url_B = "https://mywebsite.com";
+    var appName_B = "MyApp";
+    
+    var url_C = "https://mywebsite.com";
+    var appName_C = "MyApp";
+
+    var url_D = "https://mywebsite.com";
+    var appName_D = "MyApp";
+
+    var url_E = "https://mywebsite.com";
+    var appName_E = "MyApp";
+  </script>
+  <body>
+    <div id="mainContainer">
+      <span id="titleText">Click Buttons to Launch</span>
+      <br />
+      <button id="openBtn_A" class="grow"></button>
+      <br />
+      <button id="openBtn_B" class="grow"></button>
+    </div>
+
+    <!-- START OF SCRIPT A -->
+    <script>
+      var urlObj = new window.URL(window.location.href);
+
+      if (url_A) {
+        var win_A;
+        document.getElementById("mainContainer").style.display = "block";
+        document.getElementById("openBtn_A").onclick = function() {
+          if (win_A) {
+            win_A.focus();
+          } 
+          else {
+            // Opened Window Elements START
+            win_A = window.open();
+            win_A.document.body.style.margin = "0";
+            win_A.document.body.style.height = "100vh";
+            var iframe = win_A.document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.margin = "0";
+            iframe.src = url_A;
+            win_A.document.body.appendChild(iframe);
+            // Opened Window Elements END
+
+            var interval = setInterval(function() {
+              if (win_A.closed) {
+                clearInterval(interval);
+                win_A = undefined;
+                document.getElementById("openBtn_A").textContent = "Reopen " + appName_A;
+              }
+            }, 500);
+
+            document.getElementById("openBtn_A").textContent = "Reopen " + appName_A;
+          }
+        };
+      }
+    </script>
+    <!-- END OF SCRIPT A -->
+    <!-- START OF SCRIPT B -->
+    <script>
+      var urlObj = new window.URL(window.location.href);
+
+      if (url_B) {
+        var win_B;
+        document.getElementById("mainContainer").style.display = "block";
+        document.getElementById("openBtn_B").onclick = function() {
+          if (win_B) {
+            win_B.focus();
+          } 
+          else {
+            // Opened Window Elements START
+            win_B = window.open();
+            win_B.document.body.style.margin = "0";
+            win_B.document.body.style.height = "100vh";
+            var iframe = win_B.document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.margin = "0";
+            iframe.src = url_B;
+            win_B.document.body.appendChild(iframe);
+            // Opened Window Elements END
+
+            var interval = setInterval(function() {
+              if (win_B.closed) {
+                clearInterval(interval);
+                win_B = undefined;
+                document.getElementById("openBtn_B").textContent = "Reopen " + appName_B;
+              }
+            }, 500);
+
+            document.getElementById("openBtn_B").textContent = "Reopen " + appName_B;
+          }
+        };
+      }
+    </script>
+    <!-- END OF SCRIPT B -->
+    <style>
+      * {
+        color: white;
+        font-family: arial;
+        text-align: center;
+        margin: 10px;
+      }
+      .grow {
+        width: 220px;
+        height: 40px;
+        border-radius: 12px;
+        background-color: #ab6afb;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        transition: all 250ms ease-in-out;
+      }
+      .grow:hover {
+        background-color: #BB86FC;
+        transform: scale(1.1);
+      }
+    </style>
+  </body>
+</html>
+
+<!-- Extra for website -->
+<style>
+  html {
+    background-color: #121212;
+  }
+</style>

@@ -1,5 +1,5 @@
 
-# Google Sites Anit-Pointer Lock Bypass - V1.0
+# Google Sites Anit-Pointer Lock Bypass - V1.1 - PRE-RELEASE 1 
 
 Ok, it's not the best title but it works. Let me know of a better one please.  
 
@@ -12,6 +12,7 @@ There are three files to choose from.
 - `index.html` It is the main one that is updated the most but it's not very efficient. It also doesn't look very good.
 - `insert.html` This is the optimized version that I recommend using for your projects. It is optimized to run slightly faster and looks a lot smaller in comparison.
 - `instantCustomLaunch.html` This file is to be saved locally and used to choose what website you want. It can't be used in GS (Google Sites) because GS blocks `alert()` functions.
+- `multi-button.html` This is a testing file to support multiple buttons in a single embed. It is in very early development
 
 No matter which one you choose, at the beginning it will have two variables you can change. However, `instantCustomLaunch.html` will look slightly different.
 
