@@ -1,20 +1,27 @@
 
-# Google Sites Anit-Pointer Lock Bypass - V1.1 - PRE-RELEASE 1 
+# Google Sites Anit-Pointer Lock Bypass - V1.1
 
 Ok, it's not the best title but it works. Let me know of a better one please.  
 
 To explain this simply, this is a way to bypass the way Google Sites blocks you from locking your cursor/pointer/mouse in embeds. It was originally made by the user [binary-person](https://github.com/binary-person). However, it wasn't posted on GitHub and it was a little odd-looking if you could extract it. So, I figured I could spruce it up a bit and possibly improve its usability.
 
+## Features
+
+- Bypassing the anti-cursor locking on google sites
+- Does not add opened site to browsing history.*
+- Web filters do not detect traffic of the site.**
+- Sites have a lower risk getting blocked when there is a web filter.
+
 ## How can I use it?
 
-There are three files to choose from.
+There are four files to choose from and they all have the same basic functions.
 
-- `index.html` It is the main one that is updated the most but it's not very efficient. It also doesn't look very good.
-- `insert.html` This is the optimized version that I recommend using for your projects. It is optimized to run slightly faster and looks a lot smaller in comparison.
-- `instantCustomLaunch.html` This file is to be saved locally and used to choose what website you want. It can't be used in GS (Google Sites) because GS blocks `alert()` functions.
-- `multi-button.html` This is a testing file to support multiple buttons in a single embed. It is in very early development
+- [`index.html`](/index.html) It is the main one that is updated the most but it's as efficient as `insert.html`. It also doesn't look very good.
+- [`insert.html`](/insert.html) This is the optimized version that I recommend using for your projects. It is optimized to run slightly faster and looks a lot smaller in comparison.
+- [`customLaunch.html`](/customLaunch.html) This file is to be saved locally and used to choose what website you want to go to.
+- [`multi-button.html`](/multi-button.html) This is a testing file to support multiple buttons in a single embed. It is in very early development
 
-No matter which one you choose, at the beginning it will have two variables you can change. However, `instantCustomLaunch.html` will look slightly different.
+No matter which one you choose, at the beginning it will have two variables you can change. However, `customLaunch.html` will look slightly different.
 
 ```js
 var url = "https://mywebsite.com";
@@ -87,3 +94,6 @@ The rest of it is small technical things like stylesheets and storage of the app
 
 > Contact Info:  
 > Email: [isd279Games@protonmail.com](isd279Games@protonmail.com)
+
+###### * = Tested on chrome
+###### ** = Tested on Lightspeed Filter

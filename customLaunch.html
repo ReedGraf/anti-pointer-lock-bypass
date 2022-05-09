@@ -5,13 +5,15 @@
     Updated and Revised By https://github.com/ReedGraf 
 -->
 <html>
+  <title>Custom Launch</title>
   <script>
     var url = "https://mywebsite.com";
-    var appName = "MyApp";
   </script>
   <body>
     <div id="mainContainer">
-      <span id="titleText"></span>
+      <span id="titleText">Enter the URL and press Launch</span>
+      <br />
+      <input type="text" id="inputField" placeholder="https://github.com"></input>
       <br />
       <button id="openBtn" class="grow">Launch</button>
     </div>
@@ -19,8 +21,6 @@
     <script>
       if (url) {
         var win;
-        var titleText = document.getElementById("titleText");
-        titleText.textContent = "Press Button to Launch " + appName;
 
         document.getElementById("mainContainer").style.display = "block";
         document.getElementById("openBtn").onclick = function() {
@@ -28,6 +28,7 @@
             win.focus();
           } 
           else {
+            var url = document.getElementById("inputField").value;
             win = window.open();
             win.document.body.style.margin = "0";
             win.document.body.style.height = "100vh";
@@ -43,11 +44,11 @@
               if (win.closed) {
                 clearInterval(interval);
                 win = undefined;
-                titleText.textContent = appName + " closed. Click button to reopen.";
+                titleText.textContent = " Click button to reopen.";
               }
             }, 500);
 
-            titleText.textContent = appName + " is running. Click the button to switch to that tab.";
+            titleText.textContent = "Click the button to switch to that tab.";
           }
         };
       }
@@ -71,6 +72,11 @@
       #openBtn:hover {
         background-color: #BB86FC;
         transform: scale(1.1);
+      }
+      #inputField {
+      	border: none;
+      	border-radius: 7px;
+        color: black;
       }
     </style>
   </body>
