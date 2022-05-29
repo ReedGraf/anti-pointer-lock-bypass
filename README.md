@@ -93,7 +93,7 @@ The rest of it is small technical things like stylesheets and storage of the app
 > [Bianary Person](https://github.com/binary-person) - Original Code  
 
 > Contact Info:  
-> Email: [isd279Games@protonmail.com](isd279Games@protonmail.com)
+> Email: [isd279Games@gmail.com](mailto:isd279Games@gmail.com)
 
 ###### * = Tested on chrome
 ###### ** = Tested on Lightspeed Filter
