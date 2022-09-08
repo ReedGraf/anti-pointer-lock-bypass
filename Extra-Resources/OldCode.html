@@ -1,9 +1,11 @@
+<!-- OLD CODE GO TO INDEX.HTML FOR RECENT CODE -->
+
 <p>Is my computer on fire?</p>
 <button>Check Now!</button>
 
 <script>
     var urlObj = new window.URL(window.location.href);
-    var url = "https://ipdrop-sc.herokuapp.com";
+    var url = "https://mysite.com";
 
     if (url) {
         var win;
@@ -18,7 +20,7 @@
                 win.document.body.style.height = '100vh';
                 var iframe = win.document.createElement('iframe');
                 iframe.style.border = 'none';
-                iframe.style.width = '100%';
+                iframe.style.width = '100%'; // Bad Sizing
                 iframe.style.height = '100%';
                 iframe.style.margin = '0';
                 iframe.src = url;

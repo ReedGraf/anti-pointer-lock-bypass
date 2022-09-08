@@ -1,5 +1,5 @@
 
-# Google Sites Anit-Pointer Lock Bypass - V1.1
+# Google Sites Anit-Pointer Lock Bypass - V1.2
 
 Ok, it's not the best title but it works. Let me know of a better one please.  
 
