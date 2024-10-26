@@ -1,7 +1,7 @@
 
-# Google Sites Anit-Pointer Lock Bypass - V1.2
+# Google Sites Anti-Pointer Lock Bypass - V1.2
 
-Ok, it's not the best title but it works. Let me know of a better one please.  
+Ok, it's not the best title but it works. Let me know of a better one, please.  
 
 To explain this simply, this is a way to bypass the way Google Sites blocks you from locking your cursor/pointer/mouse in embeds. It was originally made by the user [binary-person](https://github.com/binary-person). However, it wasn't posted on GitHub and it was a little odd-looking if you could extract it. So, I figured I could spruce it up a bit and possibly improve its usability.
 
@@ -33,7 +33,7 @@ These two variables are the website URL you want it to open and the name of what
 ## How Does It Work?
 
 **Opening**  
-When you press the button it opens a new window, formats the body properly. To do it it sets the margin to 0 and the viewport height (vh) to 100 which is read as a percentage. Finally, it adds an iFrame element into the window.
+When you press the button it opens a new window, and formats the body properly. To do it it sets the margin to 0 and the viewport height (vh) to 100 which is read as a percentage. Finally, it adds an iFrame element into the window.
 
 ```js
 win = window.open(); //open the window
